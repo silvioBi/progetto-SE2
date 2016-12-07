@@ -1,7 +1,7 @@
 {
   "name": "SE2Lab2_HEROKU",
   "version": "1.0.0",
-  "description": "",
+  "description": "Silvio Biasiol application from the first mockup",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,16 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MattiaSalnitri/SE2Lab2_HEROKU.git"
+    "url": "git+ttps://github.com/silvioBi/progetto-SE2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MattiaSalnitri/SE2Lab2_HEROKU/issues"
+    "url": "ttps://github.com/silvioBi/progetto-SE2/issues"
   },
-  "homepage": "https://github.com/MattiaSalnitri/SE2Lab2_HEROKU#readme",
+  "homepage": "https://github.com/silvioBi/progetto-SE2#readme",
   "dependencies": {
+    "ejs": "~1.0.0",
     "express": "^4.14.0",
     "jasmine": "^2.5.2"
   }
