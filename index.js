@@ -24,10 +24,20 @@ app.use(express.static(__dirname + '/public'));
 
 
 // set the home page route
-app.get('/', function(req, res) {
+app.use('/', function(req, res) {
+    console.log("############### INCOMING POST/GET REQUEST ###############");
+    if ( typeof req.body !== 'undefined' && req.body) {
+        option = req.body.option;
+        if ( typeof option !== 'undefined' && option) {
+            if (option == "menu") {
 
-    // ejs render automatically looks in the views folder
-    res.render('index');
+            }
+        }
+    } else {
+        res.render('index');
+    }
+    
+    
 });
 
 app.listen(app.get('port'), function() {

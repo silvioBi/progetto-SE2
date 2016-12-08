@@ -14,7 +14,6 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
       </head>
       <body>
           
@@ -42,25 +41,37 @@
             </div>       
           </div>
           <!-- END menu buttons-->
-          <!-- welcome message-->
-          <div class="main_message">
-              <div class="container-fluid">
-                <div class="row">
-                    <h1 align="center">Welcome back!</h1>
-                </div>
-                <div class="row">
-                    <p align="center">Silvio, we've missed you. Let's get you some food!</p>
-                </div>
-              </div>
-          </div>
-          <!-- END welcome message -->
-          <!-- nice bottom cat -->
-          <img src="/images/cat.gif" class="to_the_bottom" style="widht=200px"/>
-          <!-- END nice bottom cat -->
           
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+          <!-- other panels-->
+          <div class="panel green">Hello world!</div>
+          <div class="panel red">Hello world!</div>
+          <div class="panel turquese">Hello world!</div>
+          <div class="panel orange">Hello world!</div>
+          <!-- END other panels-->
+          
+          <!-- landing-->
+          <span id="landing">
+              <!-- welcome message-->
+              <div class="main_message">
+                  <div class="container-fluid">
+                    <div class="row">
+                        <h1 align="center">Welcome back!</h1>
+                    </div>
+                    <div class="row">
+                        <p align="center">Silvio, we've missed you. Let's get you a nice meal!</p>
+                    </div>
+                  </div>
+              </div>
+              <!-- END welcome message -->
+              <!-- nice bottom image -->
+              <img src="/images/groceries.svg" class="to_the_bottom" style="widht=200px" id="bottom-image"/>
+              <!-- END nice bottom image -->
+          </span>
+          <!-- END landing-->
+          
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          
+        <script src="js/script.js"></script>
       </body>
     </html>
