@@ -84,9 +84,6 @@ div.main_message {
     width: 200px;
 }
 
-
-
-
 .panel {
     margin-top: -5px;
     margin-bottom: -5px;
@@ -112,4 +109,14 @@ div.main_message {
 
 .panel.turquese {
     background-color: #64bc9c;
+}
+
+
+#landing {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
 }
