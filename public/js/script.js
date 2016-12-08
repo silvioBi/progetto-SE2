@@ -74,17 +74,4 @@ function hide_show_welcome_message() {
         $("#landing").fadeOut();
         $("#bottom-image").fadeOut();
     }
-    
-    /*
-    console.log($('.panel.orange').is(':visible'));
-  if ($('.panel.green').is(':hidden') &&
-      $('.panel.red').is(':hidden') && 
-      $('.panel.orange').is(':hidden') && 
-      $('.panel.turquese').is(':hidden')) {
-        $("#landing").fadeIn();
-        $("#bottom-image").fadeIn();
-  } else {
-        $("#landing").fadeOut();
-        $("#bottom-image").fadeOut();
-  }  */
 }
