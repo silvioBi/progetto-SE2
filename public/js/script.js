@@ -75,3 +75,22 @@ function hide_show_welcome_message() {
         $("#bottom-image").fadeOut();
     }
 }
+
+// book js
+var active = false;
+
+$('.menu_button.day').click(function(e) {
+    $('.menu_button.day').not(this).removeClass('active');    
+    $(this).toggleClass('active');
+    if ($(this).hasClass("active")) {
+        active = true;
+    } else {
+        active = false;
+    }
+    if(!active) {
+        $("#day_pick").show();
+    } else {
+        $("#day_pick").hide();
+    }
+    e.preventDefault();
+});

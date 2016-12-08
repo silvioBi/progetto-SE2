@@ -1,4 +1,4 @@
-
+/* index.ejs */
 
 img {
     height: 80%;
@@ -110,3 +110,29 @@ div.main_message {
 .panel.turquese {
     background-color: #64bc9c;
 }
+/* END index.ejs */
+
+
+.btn-group.to_the_bottom{
+    position:fixed;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+}
+
+.menu_button.day {
+    background-color: #cacdd1; 
+}
+
+.menu_button.day:hover {
+  background: #61a8e2
+}
+
+.menu_button.day:active, .active {
+    color: white;
+}
+
+
+
+
+
