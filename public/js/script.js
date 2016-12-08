@@ -6,9 +6,9 @@ $(document).ready(function(){
         $(".panel.orange").slideToggle("medium");
         visible[0]=!visible[0];
         if (visible[0]) {
-            for (i=1;i<visible.length;i++) {
-                visible[i]=false;
-            }
+            visible[2]=false;
+            visible[1]=false;
+            visible[3]=false;
         }
         $(".panel.green").fadeOut("fast");
         $(".panel.red").fadeOut("fast");
@@ -20,9 +20,9 @@ $(document).ready(function(){
         $(".panel.green").slideToggle("medium");
         visible[1]=!visible[1];
         if (visible[1]) {
-            for (i=0;i<visible.length && i!=1;i++) {
-                visible[i]=false;
-            }
+            visible[0]=false;
+            visible[2]=false;
+            visible[3]=false;
         }
         $(".panel.turquese").fadeOut("fast");
         $(".panel.red").fadeOut("fast");
@@ -34,9 +34,9 @@ $(document).ready(function(){
         $(".panel.turquese").slideToggle("medium");
         visible[2]=!visible[2];
         if (visible[2]) {
-            for (i=0;i<visible.length && i!=2;i++) {
-                visible[i]=false;
-            }
+            visible[0]=false;
+            visible[1]=false;
+            visible[3]=false;
         }
         $(".panel.green").fadeOut("fast");
         $(".panel.red").fadeOut("fast");
@@ -48,9 +48,9 @@ $(document).ready(function(){
         $(".panel.red").slideToggle("medium");
         visible[3]=!visible[3];
         if (visible[3]) {
-            for (i=0;i<visible.length && i!=3;i++) {
-                visible[i]=false;
-            }
+            visible[0]=false;
+            visible[1]=false;
+            visible[2]=false;
         }
         $(".panel.green").fadeOut("fast");
         $(".panel.turquese").fadeOut("fast");
@@ -65,13 +65,16 @@ function hide_show_welcome_message() {
     for (i=0;i<visible.length;i++) {
         if (visible[i]) {
             show = !show;
+            break;
         }
     }
+    //console.log(visible);
+    //console.log(show);
     if (show) {
-        $("#landing").fadeIn();
+        $("#landing").show();
         $("#bottom-image").fadeIn();
     } else {
-        $("#landing").fadeOut();
+        $("#landing").hide();
         $("#bottom-image").fadeOut();
     }
 }
