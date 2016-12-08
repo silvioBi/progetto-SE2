@@ -92,8 +92,14 @@ $('.menu_button.day').click(function(e) {
     }
     if(!active) {
         $("#day_pick").show();
+        $(".container").hide();
     } else {
         $("#day_pick").hide();
+        $(".container").fadeIn();
     }
     e.preventDefault();
+});
+
+$('.container').on('click', function () {
+  $('.card').toggleClass('flipped');
 });
