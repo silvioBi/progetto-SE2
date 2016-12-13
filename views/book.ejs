@@ -37,40 +37,12 @@
 
 <!-- menu buttons-->
 <div class="btn-group btn-group-justified  btn-lg to_the_bottom" role="group" aria-label="...">
+    <% days.forEach(function(day) { %>
     <div class="btn-group" role="group">
         <button class="menu_button day">
-                    Mon
-                </button>
+            <%= day.name %>
+        </button>
     </div>
-    <div class="btn-group" role="group">
-        <button class="menu_button day">
-                Tue
-                </button>
-    </div>
-    <div class="btn-group" role="group">
-        <button class="menu_button day">
-                Wed
-                </button>
-    </div>
-    <div class="btn-group" role="group">
-        <button class="menu_button day">
-                Thu
-                </button>
-    </div>
-    <div class="btn-group" role="group">
-        <button class="menu_button day">
-                Fri
-                </button>
-    </div>
-    <div class="btn-group" role="group">
-        <button class="menu_button day">
-                Sat
-                </button>
-    </div>
-    <div class="btn-group" role="group">
-        <button class="menu_button day">
-                Sun
-                </button>
-    </div>
+    <% }); %>
 </div>
 <!-- END menu buttons-->

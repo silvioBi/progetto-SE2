@@ -28,6 +28,8 @@ var drinks = [
     }
     ];
 
+var days = [{name: 'Mon'},{name: 'Tue'},{name: 'Wed'},{name: 'Thu'},{name: 'Fry'},{name: 'Sat'},{name: 'Sun'}];
+
 var daily_menus = [
     {
         monday: {
@@ -49,7 +51,8 @@ app.use('/', function (req, res) {
     //rendering page with data
     res.render('index', {
         drinks: drinks,
-        daily_menus: daily_menus
+        daily_menus: daily_menus,
+        days: days
     });
     console.log("[*] Page rendered");
 });
