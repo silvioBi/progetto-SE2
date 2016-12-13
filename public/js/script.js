@@ -56,6 +56,16 @@ function hide_show_welcome_message() {
 }
 
 $('.day_button').click(function (e) {
+    var menu;
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "http://127.0.0.1:5000/menu", true );
+    xmlHttp.send();
+    xmlHttp.onloadend = function () 
+    {
+        var menu = xmlHttp.responseText;
+        console.log(menu);
+    };
+    
     var day = $(this).text();
     if (day.indexOf("Mon") !== -1) {
         $("#card0").attr("src", "/images/pasta-pesto.jpg");

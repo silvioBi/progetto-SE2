@@ -3,6 +3,14 @@ var express = require('express');
 //general lib
 var app = express();
 
+var headers = {};
+    headers["Access-Control-Allow-Origin"] = "*"; //for cross enviroment request
+    headers["Access-Control-Allow-Methods"] = "GET";//methods allowed to responce
+    headers["Access-Control-Allow-Credentials"] = false;
+    headers["Access-Control-Max-Age"] = '86400'; // 24 hours
+    headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept"; //type of headers
+    
+
 //set port 5000 to be listened
 app.set('port', (process.env.PORT || 5000));
 
@@ -14,7 +22,9 @@ app.use(express.static(__dirname + '/public'));
 
 //setting data variables to simulate database interaction
 var days = [{name: 'Mon'},{name: 'Tue'},{name: 'Wed'},{name: 'Thu'},{name: 'Fry'},{name: 'Sat'},{name: 'Sun'}];
+
 var btns_img = [{path: '/images/weekly-calendar.svg'},{path: '/images/star.svg'},{path: '/images/stethoscope.svg'},{path: '/images/settings.svg'}];
+
 var daily_menus = [
     {
         monday: {
@@ -43,8 +53,9 @@ app.get('/', function (req, res) {
 });
 
 app.get('/menu', function (req, res) {
+    res.writeHead(200, headers);
     console.log("[*] Incoming request to menu");
-    res.send(daily_menus);
+    res.end(JSON.stringify(daily_menus));
     console.log("[*] Menu sent");
 });
 
