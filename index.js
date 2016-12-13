@@ -30,9 +30,9 @@ var daily_menus = [
     }
     ];
 
-// set the sample behaviour for incoming requests
-app.use('/', function (req, res) {
-    console.log("[*] Incoming request");
+// set the behaviour for incoming requests to the main page
+app.get('/', function (req, res) {
+    console.log("[*] Incoming request to main page");
     //rendering page with data
     res.render('index', {
         daily_menus: daily_menus,
@@ -40,6 +40,12 @@ app.use('/', function (req, res) {
         btns_img: btns_img
     });
     console.log("[*] Page rendered");
+});
+
+app.get('/menu', function (req, res) {
+    console.log("[*] Incoming request to menu");
+    res.send(daily_menus);
+    console.log("[*] Menu sent");
 });
 
 //make the app listen on previoused choosen port
