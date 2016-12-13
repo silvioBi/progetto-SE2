@@ -22,26 +22,13 @@
 
     <!-- menu buttons-->
     <div class="btn-group btn-group-justified  btn-lg" role="group">
+        <% for(var i = 0; i < 4; ++i) {%>
         <div class="btn-group" role="group">
-            <button class="menu_button btn0">
-                    <img src="/images/weekly-calendar.svg">
+            <button class="menu_button btn<%=i%>">
+                    <img src="<%=btns_img[i].path%>">
                 </button>
         </div>
-        <div class="btn-group" role="group">
-            <button class="menu_button btn1">
-                <img src="/images/star.svg">
-                </button>
-        </div>
-        <div class="btn-group" role="group">
-            <button class="menu_button btn2">
-                <img src="/images/stethoscope.svg">
-                </button>
-        </div>
-        <div class="btn-group" role="group">
-            <button class="menu_button btn3">
-                <img src="/images/settings.svg">
-                </button>
-        </div>
+        <% } %>
     </div>
     <!-- END menu buttons-->
 

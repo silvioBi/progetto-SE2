@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/public'));
 
 //setting data variables to simulate database interaction
 var days = [{name: 'Mon'},{name: 'Tue'},{name: 'Wed'},{name: 'Thu'},{name: 'Fry'},{name: 'Sat'},{name: 'Sun'}];
-
+var btns_img = [{path: '/images/weekly-calendar.svg'},{path: '/images/star.svg'},{path: '/images/stethoscope.svg'},{path: '/images/settings.svg'}];
 var daily_menus = [
     {
         monday: {
@@ -36,7 +36,8 @@ app.use('/', function (req, res) {
     //rendering page with data
     res.render('index', {
         daily_menus: daily_menus,
-        days: days
+        days: days,
+        btns_img: btns_img
     });
     console.log("[*] Page rendered");
 });

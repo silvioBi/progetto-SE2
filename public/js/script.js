@@ -6,6 +6,7 @@ var day = '';
 $(document).ready(function () {
 
     $(".menu_button.btn0").click(function () {
+        console.log($(this).text());
         toggle_visibility(0);
         hide_show_welcome_message()
     });
@@ -48,8 +49,6 @@ function hide_show_welcome_message() {
             break;
         }
     }
-    //console.log(visible);
-    //console.log(show);
     if (show) {
         $("#landing").show();
         $("#bottom-image").fadeIn();
