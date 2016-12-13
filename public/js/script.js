@@ -1,66 +1,42 @@
 var visible = [false, false, false, false];
+var panels = [".panel.orange", ".panel.green",".panel.turquese",".panel.red"];
+var active = false;
+var day = '';
 
 $(document).ready(function () {
 
     $(".menu_button.btn0").click(function () {
-        $(".panel.orange").slideToggle("medium");
-        visible[0] = !visible[0];
-        if (visible[0]) {
-            visible[2] = false;
-            visible[1] = false;
-            visible[3] = false;
-        }
-        $(".panel.green").fadeOut("fast");
-        $(".panel.red").fadeOut("fast");
-        $(".panel.turquese").fadeOut("fast");
+        toggle_visibility(0);
         hide_show_welcome_message()
     });
 
     $(".menu_button.btn1").click(function () {
-        $(".panel.green").slideToggle("medium");
-        visible[1] = !visible[1];
-        if (visible[1]) {
-            visible[0] = false;
-            visible[2] = false;
-            visible[3] = false;
-        }
-        $(".panel.turquese").fadeOut("fast");
-        $(".panel.red").fadeOut("fast");
-        $(".panel.orange").fadeOut("fast");
+        toggle_visibility(1);
         hide_show_welcome_message()
     });
 
     $(".menu_button.btn2").click(function () {
-        $(".panel.turquese").slideToggle("medium");
-        visible[2] = !visible[2];
-        if (visible[2]) {
-            visible[0] = false;
-            visible[1] = false;
-            visible[3] = false;
-        }
-        $(".panel.green").fadeOut("fast");
-        $(".panel.red").fadeOut("fast");
-        $(".panel.orange").fadeOut("fast");
+        toggle_visibility(2);
         hide_show_welcome_message()
     });
 
     $(".menu_button.btn3").click(function () {
-        $(".panel.red").slideToggle("medium");
         toggle_visibility(3);
-        $(".panel.green").fadeOut("fast");
-        $(".panel.turquese").fadeOut("fast");
-        $(".panel.orange").fadeOut("fast");
         hide_show_welcome_message()
     });
 
 });
 
 function toggle_visibility(i) {
+    $(panels[i]).slideToggle("medium");
     visible[i] = !visible[i];
     if (visible[i]) {
         for (j = 0; j < 4 && j!=i; j++) {
             visible[j] = false;
         }
+    }
+    for (j = 0; j < 4 && j!=i; j++) {
+         $(panels[j]).fadeOut("fast");
     }
 }
 
@@ -82,10 +58,6 @@ function hide_show_welcome_message() {
         $("#bottom-image").fadeOut();
     }
 }
-
-// book js
-var active = false;
-var day = '';
 
 $('.menu_button.day').click(function (e) {
     day = $(this).text();
