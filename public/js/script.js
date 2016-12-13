@@ -86,14 +86,14 @@ var day = '';
 $('.menu_button.day').click(function(e) {
     day = $(this).text();
     if (day.indexOf("Mon") !== -1) {
-        $("#first_card").attr("src","/images/pasta-pesto.jpg");
-        $("#first-card-title").text("Pasta with pesto");
-        $("#first-card-text").text("Amazing pasta with fresh pesto with basil and parmesan");
+        $("#card0").attr("src","/images/pasta-pesto.jpg");
+        $("#card0-title").text("Pasta with pesto");
+        $("#card0-text").text("Amazing pasta with fresh pesto with basil and parmesan");
     }
     if (day.indexOf("Tue") !== -1) {
-        $("#first_card").attr("src","/images/pasta-al-sugo.jpg");
-        $("#first-card-title").text("Pasta al sugo");
-        $("#first-card-text").text("Simple and plain pasta with sugo from datterini tomatoes");
+        $("#card0").attr("src","/images/pasta-al-sugo.jpg");
+        $("#card0-title").text("Pasta al sugo");
+        $("#card0-text").text("Simple and plain pasta with sugo from datterini tomatoes");
     }
     //console.log(day);
     $('.menu_button.day').not(this).removeClass('active');    

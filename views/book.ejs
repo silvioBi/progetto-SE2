@@ -13,17 +13,18 @@
 </span>
 <!-- END message if no day has been picked-->
 
+
+
+<% for(var i = 0; i < 2; ++i) {%>
 <!-- cards (shows only if a day is been picked)-->
 <div class="container" style="display: none">
     <div class="card">
         <div class="front">
-            <img id="first_card" class="card_pic" src="/images/pasta-al-sugo.jpg">
+            <img id="card<%=i%>" class="card_pic">
         </div>
         <div class="back">
-            <h2 id="first-card-title" style="padding-left: 5px">Pasta al sugo</h2>
-            <p id="first-card-text" align="center">
-                Simple and plain pasta with sugo from datterini tomatoes
-            </p>
+            <h2 id="card<%=i%>-title" style="padding-left: 5px"></h2>
+            <p id="card<%=i%>-text" align="center"></p>
             <button class="book_button">
                   <span>book</span>
               </button>
@@ -31,26 +32,7 @@
     </div>
 </div>
 <!-- END cards -->
-
-<!-- cards (shows only if a day is been picked)-->
-<div class="container" style="display: none">
-    <div class="card">
-        <div class="front">
-            <img id="second_card" class="card_pic" src="/images/pasta-al-sugo.jpg">
-        </div>
-        <div class="back">
-            <h2 style="padding-left: 5px">Pasta al sugo</h2>
-            <p align="center">
-                Simple and plain pasta with sugo from datterini tomatoes
-            </p>
-            <button class="book_button">
-                  <span>book</span>
-              </button>
-        </div>
-
-    </div>
-</div>
-<!-- END cards -->
+<% } %>
 
 
 <!-- menu buttons-->
