@@ -3,28 +3,19 @@ var panels = [".panel.orange", ".panel.green",".panel.turquese",".panel.red"];
 var active = false;
 
 $(document).ready(function () {
-    
-    $(".menu_button.btn0").click(function () {
-        console.log($(this).text());
-        toggle_visibility(0);
+    $(".menu_button").click(function () {
+        var icon = $(this).children('.menu_icon').attr('src');
+        if (icon.indexOf("calendar") !== -1) {
+            toggle_visibility(0);
+        } else if (icon.indexOf("star") !== -1) {
+            toggle_visibility(1);
+        } else if (icon.indexOf("stethoscope") !== -1) {
+            toggle_visibility(2);
+        } else if (icon.indexOf("settings") !== -1) {
+            toggle_visibility(3);
+        }
         hide_show_welcome_message()
     });
-
-    $(".menu_button.btn1").click(function () {
-        toggle_visibility(1);
-        hide_show_welcome_message()
-    });
-
-    $(".menu_button.btn2").click(function () {
-        toggle_visibility(2);
-        hide_show_welcome_message()
-    });
-
-    $(".menu_button.btn3").click(function () {
-        toggle_visibility(3);
-        hide_show_welcome_message()
-    });
-
 });
 
 function toggle_visibility(i) {
@@ -45,7 +36,6 @@ function toggle_visibility(i) {
             $(panels[3]).fadeOut("fast");
         }
     }
-    console.log(visible);
 }
 
 function hide_show_welcome_message() {
