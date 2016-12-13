@@ -56,17 +56,29 @@ function hide_show_welcome_message() {
 }
 
 $('.day_button').click(function (e) {
-    var menu;
+    var day = $(this).text();
     var xmlHttp = new XMLHttpRequest();
+    
     xmlHttp.open( "GET", "http://127.0.0.1:5000/menu", true );
     xmlHttp.send();
     xmlHttp.onloadend = function () 
     {
-        var menu = xmlHttp.responseText;
-        console.log(menu);
+        var menu = JSON.parse(xmlHttp.responseText);
+        console.log(menu.monday);
     };
-    
-    var day = $(this).text();
+    /*
+    if (day.indexOf("Mon") !== -1) {
+            console.log(menu.monday.img);
+            $("#card0").attr("src", menu.monday.img);
+            $("#card0-title").text(menu.monday.name);
+            $("#card0-text").text(menu.monday.description);
+        }
+        if (day.indexOf("Tue") !== -1) {
+            $("#card0").attr("src",  menu.tuesday.img);
+            $("#card0-title").text(menu.tuesday.name);
+            $("#card0-text").text(menu.tuesday.description);
+        }
+    */
     if (day.indexOf("Mon") !== -1) {
         $("#card0").attr("src", "/images/pasta-pesto.jpg");
         $("#card0-title").text("Pasta with pesto");
@@ -77,22 +89,23 @@ $('.day_button').click(function (e) {
         $("#card0-title").text("Pasta al sugo");
         $("#card0-text").text("Simple and plain pasta with sugo from datterini tomatoes");
     }
-    //console.log(day);
-    $('.day_button').not(this).removeClass('active');
-    $(this).toggleClass('active');
-    if ($(this).hasClass("active")) {
-        active = true;
-    } else {
-        active = false;
-    }
-    if (!active) {
-        $("#day_pick").show();
-        $(".container").hide();
-    } else {
-        $("#day_pick").hide();
-        $(".container").fadeIn();
-    }
-    e.preventDefault();
+    
+        //console.log(day);
+        $('.day_button').not(this).removeClass('active');
+        $(this).toggleClass('active');
+        if ($(this).hasClass("active")) {
+            active = true;
+        } else {
+            active = false;
+        }
+        if (!active) {
+            $("#day_pick").show();
+            $(".container").hide();
+        } else {
+            $("#day_pick").hide();
+            $(".container").fadeIn();
+        }
+        e.preventDefault();
 });
 
 $('.container').on('click', function () {

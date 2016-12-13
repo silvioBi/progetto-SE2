@@ -25,7 +25,7 @@ var days = [{name: 'Mon'},{name: 'Tue'},{name: 'Wed'},{name: 'Thu'},{name: 'Fry'
 
 var btns_img = [{path: '/images/weekly-calendar.svg'},{path: '/images/star.svg'},{path: '/images/stethoscope.svg'},{path: '/images/settings.svg'}];
 
-var daily_menus = [
+var daily_menus = 
     {
         monday: {
             name: 'Pasta al sugo',
@@ -37,8 +37,7 @@ var daily_menus = [
             description: 'Amazing pasta with fresh pesto with basil and parmesan',
             img: '/images/pasta-pesto.jpg'
         }
-    }
-    ];
+    };
 
 // set the behaviour for incoming requests to the main page
 app.get('/', function (req, res) {
