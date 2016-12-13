@@ -137,6 +137,7 @@ p {
 .menu_button.day:active, .active {
     color: white;
 }
+
 /* card flipping css */
 .container {
   margin-bottom: 30px;

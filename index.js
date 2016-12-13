@@ -13,21 +13,6 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 //setting data variables to simulate database interaction
-var drinks = [
-    {
-        name: 'Bloody Mary',
-        drunkness: 3
-    },
-    {
-        name: 'Martini',
-        drunkness: 5
-    },
-    {
-        name: 'Scotch',
-        drunkness: 10
-    }
-    ];
-
 var days = [{name: 'Mon'},{name: 'Tue'},{name: 'Wed'},{name: 'Thu'},{name: 'Fry'},{name: 'Sat'},{name: 'Sun'}];
 
 var daily_menus = [
@@ -50,7 +35,6 @@ app.use('/', function (req, res) {
     console.log("[*] Incoming request");
     //rendering page with data
     res.render('index', {
-        drinks: drinks,
         daily_menus: daily_menus,
         days: days
     });
