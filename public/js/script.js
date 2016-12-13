@@ -1,10 +1,9 @@
 var visible = [false, false, false, false];
 var panels = [".panel.orange", ".panel.green",".panel.turquese",".panel.red"];
 var active = false;
-var day = '';
 
 $(document).ready(function () {
-
+    
     $(".menu_button.btn0").click(function () {
         console.log($(this).text());
         toggle_visibility(0);
@@ -30,15 +29,23 @@ $(document).ready(function () {
 
 function toggle_visibility(i) {
     $(panels[i]).slideToggle("medium");
-    visible[i] = !visible[i];
+    visible[i] = !(visible[i]);
     if (visible[i]) {
-        for (j = 0; j < 4 && j!=i; j++) {
-            visible[j] = false;
+        if (i!=0) {
+            visible[0] = false;
+            $(panels[0]).fadeOut("fast");
+        } if (i!=1) {
+            visible[1] = false;
+            $(panels[1]).fadeOut("fast");
+        } if (i!=2) {
+            visible[2] = false;
+            $(panels[2]).fadeOut("fast");
+        } if (i!=3) {
+            visible[3] = false;
+            $(panels[3]).fadeOut("fast");
         }
     }
-    for (j = 0; j < 4 && j!=i; j++) {
-         $(panels[j]).fadeOut("fast");
-    }
+    console.log(visible);
 }
 
 function hide_show_welcome_message() {
@@ -59,7 +66,7 @@ function hide_show_welcome_message() {
 }
 
 $('.menu_button.day').click(function (e) {
-    day = $(this).text();
+    var day = $(this).text();
     if (day.indexOf("Mon") !== -1) {
         $("#card0").attr("src", "/images/pasta-pesto.jpg");
         $("#card0-title").text("Pasta with pesto");
