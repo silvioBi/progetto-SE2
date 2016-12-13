@@ -55,7 +55,7 @@ function hide_show_welcome_message() {
     }
 }
 
-$('.menu_button.day').click(function (e) {
+$('.day_button').click(function (e) {
     var day = $(this).text();
     if (day.indexOf("Mon") !== -1) {
         $("#card0").attr("src", "/images/pasta-pesto.jpg");
@@ -68,7 +68,7 @@ $('.menu_button.day').click(function (e) {
         $("#card0-text").text("Simple and plain pasta with sugo from datterini tomatoes");
     }
     //console.log(day);
-    $('.menu_button.day').not(this).removeClass('active');
+    $('.day_button').not(this).removeClass('active');
     $(this).toggleClass('active');
     if ($(this).hasClass("active")) {
         active = true;

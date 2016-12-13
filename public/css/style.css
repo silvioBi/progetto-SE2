@@ -126,15 +126,25 @@ p {
     width: 100%;
 }
 
-.menu_button.day {
-    background-color: #cacdd1; 
+.day_button {
+    background-color: #cacdd1;
+    border: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
-.menu_button.day:hover {
+.day_button:hover {
   background: #61a8e2
 }
 
-.menu_button.day:active, .active {
+.day_button:active, .active {
     color: white;
 }
 
