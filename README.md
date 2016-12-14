@@ -26,4 +26,4 @@ Ho realizzato, tramite http://editor.swagger.io, delle API, possono essere trova
 
 ## Code Review
 https://docs.google.com/
-Revisione tramite commenti fluttuanti, link relativo alla repository di cui è stata fatta code review: https://docs.google.com/
+Revisione tramite commenti fluttuanti, link relativo alla repository di cui è stata fatta code review: https://github.com/Biiz/SE2_16_173209_157597_P
