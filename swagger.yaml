@@ -1,0 +1,44 @@
+swagger: '2.0'
+info:
+  title: SE2 project by Silvio Biasiol
+  description: definition of api
+  version: "1.0.15"
+# the domain of the service
+host: glacial-sands-27704.herokuapp.com
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: /
+produces:
+  - text/html
+  - text
+consumes:
+  - text/html
+# the APIs
+paths:
+  /menu:
+    get:
+      summary: it returns the weekly menu
+      description: it shows a page with a json object representing the menu
+      responses:
+        200:
+          description: Json object representing menu
+          schema:
+            $ref: "#/definitions/menu"
+
+definitions:
+  menu:
+    type: object
+    properties:
+      daily_menus:
+        type: array
+        items:
+          $ref: '#/definitions/day'
+  day:
+    type: object
+    properties:
+      name:
+        type: string
+      description:
+        type: string
