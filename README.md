@@ -25,5 +25,5 @@ E' stata testata la funzionalità di:
 Ho realizzato, tramite http://editor.swagger.io, delle API, possono essere trovate nel file swagger.yaml nella directory principale
 
 ## Code Review
-https://docs.google.com/
+https://docs.google.com/document/d/1KGxmlFOyeXTm800V-kcyZAfev9dUyR1_RTxh-S2gPKg/edit?usp=sharing
 Revisione tramite commenti fluttuanti, link relativo alla repository di cui è stata fatta code review: https://github.com/Biiz/SE2_16_173209_157597_P
